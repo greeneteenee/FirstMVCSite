@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewData["Title"]</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<body>
+    <h1 class="display-1 ml-4">My First MVC Webpage</h1>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ml-4">
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" asp-controller="Home" asp-action="Index">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="Home" asp-action="About">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="Home" asp-action="Privacy">Privacy Policy</a>
+                </li>
+             
+            </ul>
+        </div>
+    </nav>
+
+    @*<nav><a asp-controller="Home" asp-action="Index">Home</a></nav>
+    <nav><a asp-controller="Home" asp-action="About">About</a></nav>
+    <nav><a asp-controller="Home" asp-action="Privacy">Privacy Policy</a></nav>*@
+    <main class="m-5">@RenderBody()</main>
+    <footer class="ml-4"><p>&copy; @DateTime.Today.Year Joe's website</p></footer>
+</body>
+</html>
